@@ -1,8 +1,8 @@
-require_relative '../config/environment'
+require_relative 'config/environment.rb'
 
 class App < Sinatra::Base
 
-    converter = PigLatinizer.new
+    @converter = PigLatinizer.new
     get '/' do
 
     end
