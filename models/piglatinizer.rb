@@ -1,12 +1,12 @@
 require 'pry'
 class PigLatinizer
-    def self.piglatinize(text)
-        word_array = split_words_into_array(text)
+    def piglatinize(text)
+        word_array = self.class.split_words_into_array(text)
         entencesay = word_array.map do |word|
-            if is_vowel?(word[0])
-                piglatinize_vowel_word(word)
-            elsif is_consonant?(word[0])
-                piglatinize_consonant_word(word)
+            if self.class.is_vowel?(word[0])
+                self.class.piglatinize_vowel_word(word)
+            elsif self.class.is_consonant?(word[0])
+                self.class.piglatinize_consonant_word(word)
             else
                 word
             end
